@@ -1,0 +1,81 @@
+.advice{
+    padding: 125px 0px 81px;
+    background-color: #fafafa;
+    .container{
+        text-align: center;
+    }
+    &__cards{
+        display: grid;
+        grid-template-columns: 230px 230px 230px 230px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__card{
+        padding-top: 30px;
+        text-align: left;
+        background-color: #fff;
+        box-shadow: 0px 16px 18px rgba(0, 0, 0, 0.21);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__cardTitle{
+        margin-left: 29px;
+        margin: 0 29px 15px;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: capitalize;
+        margin-bottom: 15px;
+    }
+    &__text{
+        margin: 0px 29px 30px;
+    }
+}
+
+@media (max-width: 980px) {
+    .advice{
+        &__cards{
+            grid-template-columns: 280px 280px;
+            justify-content: space-evenly;
+            max-width: 610px;
+            margin: 0 auto;
+        }
+        &__card{
+            &:first-child{margin-bottom: 20px;}
+            &:nth-child(2){margin-bottom: 20px;}
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .advice{
+        &__cards{
+            grid-template-columns: 230px 230px;
+        }
+        &__card{
+            width: 230px;
+        }
+    }
+}
+
+@media (max-width: 540px) {
+    .advice{
+        padding: 98px 0px 70px;
+        &__cards{
+            grid-template-columns: 250px;
+            justify-content: center;
+        }
+        &__card{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media (max-width: 340px) {
+    .advice{
+        &__cards{
+            grid-template-columns: 230px;
+        }
+    }
+}

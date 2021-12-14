@@ -1,0 +1,38 @@
+.footer{
+    background-color: #16697A;
+    &__end{
+        background-color: #fafafa;
+        padding: 25px 0;
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    &__items{
+        display: flex;
+        align-items: center;
+    }
+    &__item{
+        margin-left: 20px;
+        transition: .5s;
+        &:hover{
+            transform: rotate(360deg);
+        }
+        &:first-child{
+            margin-left: 0;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .footer{
+        .container{
+            flex-direction: column;
+            max-width: 390px;
+        }
+        .text{
+            margin-bottom: 50px;
+        }
+    }
+}

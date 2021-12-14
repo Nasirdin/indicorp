@@ -1,0 +1,118 @@
+.company{
+    background-color: #fafafa;
+    padding: 50px 0 0;
+    position: relative;
+    &__items{
+        display: grid;
+        grid-template-columns: 110px 110px 110px 110px 110px 110px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__block{
+        margin-bottom: 140px;
+
+    }
+    &__item{
+        text-align: center;
+    }
+    &__form{
+        background-color: #16697A;
+        width: 986px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 50px;
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        
+    }
+    &__subscribe{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    &__input{
+        width: 333px;
+        padding: 15px 20px;
+        outline: none;
+        background-color: #fff;
+        border: none;
+    }
+    &__btn{
+        padding: 15px 22px 13px !important;
+        margin-top: 1px;
+        font-weight: 500 !important;
+    }
+    &__title{
+        font-size: 24px;
+        color: #fff;
+        text-transform: capitalize;
+        max-width: 258px;
+    }
+    &__footer{
+        background-color: #252B42;
+        width: 100%;
+        height: 77px;
+    }
+}
+
+@media (max-width: 1020px) {
+    .company{
+        &__form{
+            width: 850px;
+        }
+    }
+}
+@media (max-width: 875px) {
+    .company{
+        .container{
+            margin-bottom: 45px;
+        }
+        &__items{
+            grid-template-columns: 110px 110px 110px;
+            justify-content: space-around;
+        }
+        &__item{
+            margin-bottom: 30px;
+        }
+        &__title{
+            max-width: 410px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        &__form{
+            width: 100%;
+            position: relative;
+            flex-direction: column;
+            bottom: 0;
+        }
+        &__footer{
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .company{
+        &__items{
+            grid-template-columns: 110px;
+        }
+        &__item{
+            margin-bottom: 50px;
+        }
+        &__input{
+            width: 210px;
+        }
+    }
+}
+@media (max-width: 335px) {
+    .company{
+        &__input{
+            width: 190px;
+        }
+    }
+}

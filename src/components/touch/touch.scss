@@ -1,0 +1,89 @@
+.touch{
+    padding: 80px 0px 148px;
+    background-color: #f3f3f3;
+    &__title{
+        text-align: center;
+    }
+    &__subtitle{
+        text-align: center;
+        margin-bottom: 80px;
+    }
+    &__cards{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 985px;
+        margin: 0 auto;
+    }
+    &__card{
+        text-align: center;
+        padding: 50px 0;
+        background-color: #fff;
+        width: 328px;
+    }
+    &__card_black{
+        background-color: #252B42;
+        padding: 80px 0;
+        p, h3, button{
+            color: #fff;
+        }
+        button{
+            border: 1px solid #fff;
+            &:hover{
+                color: #252B42;
+                background-color: #fff;
+            }
+        }
+    }
+    &__icon{
+        margin-bottom: 16px;
+    }
+    &__gmail2{
+        margin-bottom: 15px;
+    }
+    &__get{
+        margin-bottom: 15px;
+        font-size: 16px;
+        text-transform: capitalize;
+    }
+    &__btn{
+        padding: 10px 20px;
+        border: 1px solid #FFA62B;
+        color: #FFA62B;
+        outline: none;
+        background: none;
+        border-radius: 5px;
+        transition: .5s all;
+        &:hover{
+            background-color: #FFA62B;
+            color: #fff;
+        }
+    }
+}
+
+@media (max-width: 784px){
+    .touch{
+        padding: 75px 0 130px;
+        &__cards{
+            flex-direction: column;
+        }
+        &__card{
+            margin-bottom: 30px;
+            box-shadow: 0px 16px 28px rgba(0, 0, 0, 0.21);
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+@media (max-width: 360px){
+    .touch{
+        &__cards{
+            flex-direction: column;
+        }
+        &__card{
+            width: 280px;
+            padding: 40px 30px;
+        }
+    }
+}

@@ -1,0 +1,120 @@
+.header{
+    margin-bottom: 116px;
+    .container{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    &__logo{
+        margin-right: 117px;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-between;
+       &__item{
+           margin-right: 21px;
+           &:last-child{
+               margin-right: 0;
+           }
+       } 
+       &__link{
+           font-size: 14px;
+           color: #737373;
+           transition: .5s;
+           &:hover{
+               color: #999;
+           }
+       }
+    }
+    .burger{
+        display: none;
+    }
+}
+
+@media (max-width: 729px) {
+    .header{
+        margin-bottom: 80px;
+        .container{
+            justify-content: space-between;
+            align-items: start;
+        }
+        &__logo{
+            margin-right: 0;
+        }
+    }
+}
+
+@media (max-width: 540px) {
+    
+    .header{
+        .nav{
+            display: none;
+            align-items: center;
+            flex-direction: column;
+            margin: 100px auto 0;
+            &__item{
+                margin-right: 0;
+                margin-bottom: 30px;
+            }
+            &__link{
+                font-size: 26px;
+                font-weight: 400;
+            }
+        }
+        
+        .burger{
+            display: block;
+            position: relative;
+            width: 15px;
+            height: 2px;
+            background-color: #252B42;
+            transition: background 0, all .5s;
+            margin-top: 7px;
+            cursor: pointer;
+            &::before{
+                content: '';
+                position: absolute;
+                width: 22px;
+                height: 2px;
+                background-color: #252B42;
+                top: -5px;
+                right: 0;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                width: 7px;
+                height: 2px;
+                background-color: #252B42;
+                top: 5px;
+            }
+        }
+        
+    }
+    .header__active{
+        margin-top: -36px;
+        width: 100%;
+        background-color: #fff;
+        padding: 36px 0px 98px;
+        .header__nav{
+            display: flex !important;
+            
+        }
+        .burger{
+            background: none;
+            &::before{
+                transform: rotate(-45deg);
+                top: 0;
+            }
+            &::after{
+                transform: rotate(45deg);
+                top: 0;
+                left: -7px;
+                width: 22px;
+            }
+        }
+        .header__logo{
+            position: absolute;
+        }
+    }
+}
